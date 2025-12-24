@@ -304,7 +304,7 @@ export default function ContactPage() {
                 className="relative px-8 py-3 bg-transparent text-sky-600 dark:text-sky-400 rounded-lg border-2 border-sky-500 dark:border-sky-600 overflow-hidden group transition-all duration-300 font-medium inline-flex items-center justify-center hover:text-slate-100 dark:hover:text-slate-100"
               >
                 {/* Background slide effect */}
-                <span className="absolute inset-0 bg-gradient-to-r from-sky-500 to-sky-600 dark:from-sky-600 dark:to-sky-700 transform translate-x-60 group-hover:translate-x-0 transition-transform duration-300 ease-out"></span>
+                <span className="absolute inset-0 bg-gradient-to-r from-sky-500 to-sky-600 dark:from-sky-600 dark:to-sky-700 transform translate-x-80 group-hover:translate-x-0 transition-transform duration-300 ease-out"></span>
                 
                 {/* Content */}
                 <span className="relative z-10 inline-flex items-center">

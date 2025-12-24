@@ -335,7 +335,7 @@ export default function AboutPage() {
           {/* Certifications Section */}
           <div className="mt-12 sm:mt-16 md:mt-20 lg:mt-24">
             <div className="flex justify-center items-center mb-4 sm:mb-5 md:mb-6">
-              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-4 text-slate-800 dar:text-slate-100">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-4 text-slate-800 dark:text-slate-100">
                 Certification
               </h3>
             </div>
