@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Poppins', sans-serif;
+    @apply bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 transition-colors duration-300;
+  }
+  
+  body {
+    @apply bg-slate-50 dark:bg-slate-950 transition-colors duration-300;
+  }
+}
+
+:root {
+  --font-poppins: 'Poppins', sans-serif;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-feature-settings: "ss01", "ss02", "cv01", "cv02";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  @apply bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 transition-colors duration-300;
+}
+
+/* Transisi global yang lebih halus */
+* {
+  @apply transition-colors duration-200;
+}
+
+/* Optional: Custom classes untuk font-weight yang spesifik */
+.font-thin {
+  font-weight: 100;
+}
+.font-extralight {
+  font-weight: 200;
+}
+.font-light {
+  font-weight: 300;
+}
+.font-normal {
+  font-weight: 400;
+}
+.font-medium {
+  font-weight: 500;
+}
+.font-semibold {
+  font-weight: 600;
+}
+.font-bold {
+  font-weight: 700;
+}
+.font-extrabold {
+  font-weight: 800;
+}
+.font-black {
+  font-weight: 900;
+}
+
+.dark {
+  --gradient-next: linear-gradient(135deg, #0c4a6e, #0369a1);
+}
+
+@layer utilities {
+  .animate-fadeIn {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Better scrollbar */
+  ::-webkit-scrollbar {
+    width: 9px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-slate-100 dark:bg-slate-900;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-slate-400 dark:bg-slate-600 rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-slate-500 dark:bg-slate-500;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-sky-600 hover:bg-sky-700 dark:bg-sky-600 dark:hover:bg-slate-700 dark:hover:border-slate-700 text-slate-100 font-medium 
+    border border-sky-600 dark:border-sky-500
+    py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 ;
+  }
+  
+  .btn-secondary {
+    @apply border-2 border-slate-300 dark:border-slate-600 dark:hover:border-slate-700 text-slate-700 dark:text-slate-200 hover:bg-sky-600 dark:hover:bg-slate-700 hover:text-slate-100 dark:hover:text-slate-100 
+    font-medium py-3 px-6 rounded-lg transition-all duration-300;
+  }
+  
+  .section-container {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-slate-900 dark:text-slate-50 mb-12 text-center;
+  }
+  
+  /* Card styles untuk konsistensi */
+  .card {
+    @apply bg-white dark:bg-slate-900 rounded-xl shadow-lg p-6 transition-all duration-300 hover:shadow-xl border border-slate-200 dark:border-slate-800;
+  }
+  
+  .card-light {
+    @apply bg-slate-100 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800;
+  }
+  
+  /* Border yang konsisten */
+  .border-light {
+    @apply border-slate-200 dark:border-slate-800;
+  }
+  
+  /* Text yang konsisten */
+  .text-primary {
+    @apply text-slate-900 dark:text-slate-50;
+  }
+  
+  .text-secondary {
+    @apply text-slate-700 dark:text-slate-300;
+  }
+  
+  .text-muted {
+    @apply text-slate-500 dark:text-slate-400;
+  }
+  
+  /* Accent colors menggunakan sky */
+  .text-accent {
+    @apply text-sky-600 dark:text-sky-400;
+  }
+  
+  .bg-accent {
+    @apply bg-sky-600 dark:bg-sky-500;
+  }
+  
+  .border-accent {
+    @apply border-sky-600 dark:border-sky-500;
+  }
+}
+
+/* Tambahkan line-clamp utility */
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.line-clamp-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+/* Slide up animation */
+@keyframes slideUpOut {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideUpIn {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-up-out {
+  animation: slideUpOut 0.7s ease-out forwards;
+}
+
+.animate-slide-up-in {
+  animation: slideUpIn 0.7s ease-out forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.2s ease-out;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.2s ease-out;
+}
+
+/* Gradient Animation Classes */
+@keyframes gradient-x {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes gradient-fast {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 0% 50%;
+  }
+  75% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient-x {
+  animation: gradient-x 3s ease infinite;
+}
+
+.animate-gradient-fast {
+  animation: gradient-fast 2s ease infinite;
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-down {
+  animation: slide-down 0.3s ease-out forwards;
+}
+
+/* Selection color */
+::selection {
+  @apply bg-sky-200 dark:bg-sky-800 text-slate-900 dark:text-white;
+}
+
+/* Placeholder styles */
+::placeholder {
+  @apply text-slate-400 dark:text-slate-500;
+}
+
+/* Tambahkan ke global.css */
+@keyframes smooth-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes gentle-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes fluid-wave {
+  0% {
+    transform: translateX(-100%) skewX(-15deg);
+  }
+  100% {
+    transform: translateX(200%) skewX(-15deg);
+  }
+}
+
+/* Custom easing untuk lebih smooth */
+.transition-smooth {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.transition-bounce {
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.transition-elastic {
+  transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
