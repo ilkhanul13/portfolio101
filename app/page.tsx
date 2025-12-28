@@ -183,7 +183,7 @@ export default function Home() {
               <Link
                 href="/projects"
                 className="inline-flex items-center px-4 py-2 sm:px-6 sm:py-3 
-                bg-sky-200 dark:bg-slate-800 text-slate-800 dark:text-slate-200 rounded-lg 
+                bg-sky-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-lg 
                 hover:bg-sky-300 dark:hover:bg-gray-700 transition-colors duration-300 font-medium text-sm sm:text-base group"
               >
                 <FiFolderPlus className="mr-2"/>
