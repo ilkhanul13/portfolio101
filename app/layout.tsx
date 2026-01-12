@@ -16,7 +16,7 @@ const poppins = Poppins({
 })
 
 export const metadata = {
-  title: 'Ilhanul - Graphic Designer',
+  title: 'Ilkhanul - Graphic Designer',
   description: 'Portofolio profesional dengan showcase project dan skill',
 }
 
